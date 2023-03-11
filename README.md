@@ -1,5 +1,7 @@
 # JavaScript Data-Structure Questions/Programs
 
+In this article we cover some of the most commonly asked JavaScript data structure questions related to arrays, strings and objects which commonly asked in interviews at tier 1 companies.
+
 - Sorting Algorithms (Bubble Sort)
 - Search Algorithms (Linear Search, Binary Search)
 
