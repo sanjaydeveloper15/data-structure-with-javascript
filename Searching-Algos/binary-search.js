@@ -1,3 +1,4 @@
+// Write a program to check if value/target exists or not in ascending array in O(log n) time complexity ?
 const customInArray = (sortedArray, key) => {
     let start = 0;
     let end = sortedArray.length - 1;
