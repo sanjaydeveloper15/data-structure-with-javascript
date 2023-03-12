@@ -1,4 +1,4 @@
-// Custom sorting program in JS via Bubble Sort ?
+// Custom sorting program in JS via Bubble Sort?
 let unSortArr = [4,-1,34,09,-9,103]
 
 const sortArr = (inputArr) => {

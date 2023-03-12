@@ -1,4 +1,4 @@
-// Write a program to check if a string or word or number is palindrome ?
+// Write a program to check if a string or word or number is palindrome?
 const isPlaindrome = (inputChar) => {
     let str = inputChar.toString();
     let resultWord = '';
