@@ -19,7 +19,6 @@ const obj = {
 
 const addKeyInObj = (obj,objKeyName='') => {
     if(objKeyName != ''){
-
     }
     //console.log(Object.fromEntries(obj));
     // console.log(Object.keys(resultObj).length)
