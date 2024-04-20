@@ -18,8 +18,9 @@ In this repository we cover some of the most commonly asked JavaScript data stru
 9. How do you remove duplicates from an integer array ?
 10. We have group of people in the form of array and you have to group people basis upon age ?
 11. Count unique value from Sorted Array without using any array methods and set() with **O(n)** Time Complexity ?
+and lot more...
 
-[Read More...](https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/)
+[Read Blog](https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/)
 
 ### Fequency Counter
 
