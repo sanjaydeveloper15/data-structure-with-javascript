@@ -1,7 +1,7 @@
 # JavaScript Data-Structure Questions/Programs
 
 <p align="center">
-  <img src="https://i.postimg.cc/rmd6DfZD/dsa.jpg" alt="Node TypeScript - Education Funda"/>
+  <img src="https://i.postimg.cc/rmd6DfZD/dsa.jpg" alt="DSA - Education Funda"/>
 </p>
 
 In this repository we cover some of the most commonly asked JavaScript data structure questions related to arrays, strings and objects which commonly asked in interviews at tier 1 companies.
