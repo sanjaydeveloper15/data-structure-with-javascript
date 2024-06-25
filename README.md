@@ -35,3 +35,7 @@ Many times you need to compare between 2 arrays in that situation simplest solut
 
 Many times in **Sorted Array** we need to compare and we generally do nested loop so for solving this we can use this Multiple Pointer magic, in which we generally use **Binary Search Algorithm**. We 1st have to analyse our pointer it could be 1st or Last indexs or 1st or 2nd *Indexes*.
 
+### Sliding Window Pattern
+
+When we have **String** or **Array** which creating a WINDOW from one position to another position depending upon certain condition and a new window is created. It is very useful for keeping track of a subset of data in an array/string etc.
+
