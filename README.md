@@ -39,3 +39,7 @@ Many times in **Sorted Array** we need to compare and we generally do nested loo
 
 When we have **String** or **Array** which creating a WINDOW from one position to another position depending upon certain condition and a new window is created. It is very useful for keeping track of a subset of data in an array/string etc.
 
+### Divide and Conquer Pattern
+
+It is related to our search and sorting algorithms, such as in Binery Search we divide the array from mid then search the element.
+
