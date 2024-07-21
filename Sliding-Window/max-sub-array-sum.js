@@ -54,16 +54,22 @@ const maxSubarraySum2 = (inputArr, subArrEle) => {
     console.log('inputArr length:',inputArr?.length)
     let maxSum = 0;
     let totalLoopRuns = 0;
+    let arrEleSum = 0
     // first subEleSum
     for(let i=0; i<subArrEle; i++) {
         maxSum += inputArr[i]
         totalLoopRuns++
     }
+    arrEleSum = maxSum;
     for(let j = subArrEle; j<inputArr.length; j++) {
-        const sumWithNext = Number(maxSum) + Number(inputArr[j]);
-        console.log(sumWithNext)
+        const sumWithNext = Number(arrEleSum) + Number(inputArr[j]);
+        // console.log('sumWithNext',sumWithNext)
         const currentSubArrEleSum = Number(sumWithNext) - Number(inputArr[j - subArrEle]);
+        // console.log('currentSubArrEleSum',currentSubArrEleSum)
+        arrEleSum = currentSubArrEleSum;
         maxSum = (maxSum < currentSubArrEleSum) ? currentSubArrEleSum : maxSum;
+        // console.log('maxSum',maxSum)
+        // console.log('..........................')
         totalLoopRuns++
     }
     console.log('totalLoopRuns:',totalLoopRuns)
