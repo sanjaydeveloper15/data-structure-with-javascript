@@ -1,4 +1,6 @@
-// Write a function called sumZero which accepts a sorted array of integers. The function should find he first Pair where the SUM is 0. Returns an array that includes both values that sum to zero OR undefined if a pair Does not exist.
+// Write a function called sumZero which accepts a sorted array of integers. 
+// The function should find he first Pair where the SUM is 0. Returns an array that includes both values that sum to 
+// zero OR undefined if a pair Does not exist.
 
 const sumZero = (inputSortedArray) => {
     // validations
