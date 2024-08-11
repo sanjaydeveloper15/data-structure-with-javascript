@@ -1,4 +1,5 @@
-// Write a function called the same. Which accepts 2 arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same.
+// Write a function called the same. Which accepts 2 arrays. The function should return true if every value in the array
+// has its corresponding value squared in the second array. The frequency of values must be the same.
 
 const arr1 = [1, 2, 3]
 const arr2 = [1, 9, 4]

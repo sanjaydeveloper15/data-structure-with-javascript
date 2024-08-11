@@ -1,4 +1,5 @@
-// Implement a Fn called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+// Implement a Fn called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. 
+// There can be negative numbers in the array, but it will always be sorted.
 console.log('--------------------- Method 1: ----------------------')
 const countUniqueValues = (sortedArr) => {
     // validations
@@ -34,7 +35,7 @@ const countUniqueValues2 = (sortedArr) => {
     let leftIndex = 0, rightIndex = (sortedArr.length > 0) ? 1 : 0
     let uniqueValues = 1
     let loopCount = 0
-    let lastEleVal = sortedArr[sortedArr.length-1]
+    let lastEleVal = sortedArr[sortedArr.length - 1]
     while (leftIndex < rightIndex) {
         loopCount++
         // console.log(leftIndex, rightIndex)

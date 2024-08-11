@@ -1,11 +1,12 @@
-//Write a program to Add id key with value 1 in each nested object
+// Write a program to Add id key with value 1 in each nested object
+
 const obj = {
     name: {
         final: {
-            val: 'yes'
-        }
-    }
-}
+            val: "yes",
+        },
+    },
+};
 // const outObj = {
 //     id: 1,
 //     name: {
@@ -18,13 +19,13 @@ const obj = {
 // }
 
 const addKeyInObj = (obj, key, value) => {
-    Object.values(obj).forEach(val => {
-        if (val && typeof val === 'object') {
+    Object.values(obj).forEach((val) => {
+        if (val && typeof val === "object") {
             addKeyInObj(val, key, value);
         }
     });
     obj[key] = value;
     return obj;
-}
+};
 
-console.log(addKeyInObj(obj, 'id', 1));
+console.log(addKeyInObj(obj, "id", 1));

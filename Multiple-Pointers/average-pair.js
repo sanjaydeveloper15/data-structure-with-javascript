@@ -15,7 +15,7 @@ function averagePair(inputSortedArray, pairAverage) {
             // console.log(leftIndex, rightIndex)
             const leftIndexVal = inputSortedArray[leftIndex]
             const rightIndexVal = inputSortedArray[rightIndex]
-            const sum = (leftIndexVal + rightIndexVal)/2
+            const sum = (leftIndexVal + rightIndexVal) / 2
             if (sum === pairAverage) {
                 resultArr.push(leftIndexVal, rightIndexVal)
                 break
