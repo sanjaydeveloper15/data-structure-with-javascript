@@ -41,3 +41,10 @@ When we have **String** or **Array** which creating a WINDOW from one position t
 ### Divide and Conquer Pattern
 
 It is related to our search and sorting algorithms, such as in Binery Search we divide the array from mid then search the element.
+
+### Recursion
+
+Keeps calling same function until didn't get expected result. Here few Points are so important otherwise our Call Stack will be infinite and size exceeding error comes:
+
+- Identify base case such as if (statement) return x;
+- It basically depends upon call stack, you can check call stack example in Examples directory.
