@@ -44,3 +44,21 @@ const arrMultiplyRecursion = (inputMultiArr) => {
 }
 
 console.log('arrMultiplyRecursion() Result:', arrMultiplyRecursion(multiArr).toLocaleString());
+
+console.log('------- Question: Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.? -------');
+
+const flatten = (inputArr, resultArr = []) => {
+    for (let i = 0; i < inputArr.length; i++) {
+        if (Array.isArray(inputArr[i])) {
+            flatten(inputArr[i], resultArr);
+        } else {
+            resultArr.push(inputArr[i]);
+        }
+    }
+    return resultArr;
+}
+
+console.log(flatten([1, 2, 3, [4, 5]])) // [1, 2, 3, 4, 5]
+console.log(flatten([1, [2, [3, 4], [[5]]]])) // [1, 2, 3, 4, 5]
+console.log(flatten([[1],[2],[3]])) // [1,2,3]
+console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])) // [1,2,3]
