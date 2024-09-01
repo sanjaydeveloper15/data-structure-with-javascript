@@ -48,3 +48,7 @@ Keeps calling same function until didn't get expected result. Here few Points ar
 
 - Identify base case such as if (statement) return x;
 - It basically depends upon call stack, you can check call stack example in Examples directory.
+
+### Bubble Sort
+
+Runs two loops for sorting the Integer arrays and swap the numbers basis upon comparisions. This "works well with small items of array only" as we know that Wrost and Average case time complexity for it is O(nSquare), only best case goes to O(n) time complexity.
