@@ -18,3 +18,33 @@ const customInArray = (sortedArray, key) => {
 }
 
 console.log(customInArray([1, 3, 5, 6, 9, 14, 29, 57, 89], 29));
+
+
+// get index number or return -1 via binary search
+const binarySearch = (sortedNumArr, findVal) => {
+    if (!sortedNumArr || sortedNumArr.length < 1) return -1;
+    console.log(`----- Total Array Length: ${sortedNumArr.length} -----`);
+    let leftIndex = 0;
+    let rightIndex = sortedNumArr.length - 1;
+    let midIndex = Math.round((leftIndex + rightIndex) / 2);
+    let i = 0;
+    while (leftIndex < rightIndex) {
+        i++;
+        console.log('i:',i);
+        if (findVal === sortedNumArr[leftIndex]) return leftIndex;
+        if (findVal === sortedNumArr[rightIndex]) return rightIndex;
+        if (findVal === sortedNumArr[midIndex]) return midIndex;
+
+        if (findVal > sortedNumArr[midIndex]) {
+            leftIndex = midIndex;
+            midIndex = Math.round((leftIndex + rightIndex) / 2);
+        } else {
+            rightIndex = midIndex;
+            midIndex = Math.round((leftIndex + rightIndex) / 2);
+        }
+    }
+    return -1;
+}
+
+console.log(binarySearch([1, 2, 3, 4, 5], 6)) // -1
+console.log(binarySearch([1, 3, 5, 6, 9, 14, 29, 57, 89], 29)); // 1
