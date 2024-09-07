@@ -14,7 +14,8 @@ const sortArr = (inputArr) => {
             }
         }
     }
-    console.log('totalIterations',totalIterations)
+    console.log('arrayLength', inputArr.length);
+    console.log('totalIterations', totalIterations)
     return inputArr;
 };
 
@@ -37,9 +38,10 @@ const sortArrOpt = (inputArr) => {
                 noSwapsReq = false
             }
         }
-        if(noSwapsReq) break;
+        if (noSwapsReq) break;
     }
-    console.log('totalIterations',totalIterations)
+    console.log('arrayLength', inputArr.length);
+    console.log('totalIterations', totalIterations)
     return inputArr;
 };
 

@@ -52,3 +52,7 @@ Keeps calling same function until didn't get expected result. Here few Points ar
 ### Bubble Sort
 
 Runs two loops for sorting the Integer arrays and swap the numbers basis upon comparisions. This "works well with small items of array only" as we know that Wrost and Average case time complexity for it is O(nSquare), only best case goes to O(n) time complexity.
+
+### Merge Sort
+
+Merge sort works really well with big size of Integer arrays as well and give response so faster as compare to Bubble/Insertion/Selection sort algorithms. It improves time complexity from O(nSquare) to O(n-log-n).
