@@ -1,5 +1,9 @@
 console.log(`------- Q1: Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array? -------`);
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const capitalizeFirst = (inputStrArr, resultStrArr = []) => {
     console.log(inputStrArr)
     if (inputStrArr.length === 0) return resultStrArr;
@@ -17,6 +21,10 @@ console.log(capitalizeFirst(['car', 'taco', 'banana'])); // ['Car','Taco','Banan
 console.log(`------- Q1: End -------`);
 
 console.log(`------- Q2: Write a recursive function called nestedEvenSum. Return the sum of all EVEN Numbers in an object which may contain nested objects? -------`);
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n+d) // here d denote for depth
+ */
 const nestedEvenSum = (nestedObj) => {
     let totalEvenNumSum = 0;
     const objKeys = Object.keys(nestedObj)
@@ -60,6 +68,10 @@ console.log(`------- Q2: End -------`);
 
 console.log(`------- Q3: Write a recursive function called capitalizeWords. Given an array of words, return a new array containing each word capitalized? -------`);
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const capitalizeWords = (inputStrArr, resultStrArr = []) => {
     if (inputStrArr.length === 0) return resultStrArr;
     const upperCaseWord = inputStrArr[0].toUpperCase();
@@ -86,7 +98,10 @@ let obj = {
     }
 }
 
-
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n+d) // here d denote for depth
+ */
 const stringifyNumbers = (inputObj) => {
     const objKeys = Object.keys(inputObj);
     objKeys.map((k) => {

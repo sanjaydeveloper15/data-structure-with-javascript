@@ -1,5 +1,9 @@
 console.log(`------- Question 1: Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic the functionality of Math.pow()  - do not worry about negative bases and exponents? --------`);
 console.log('----------------')
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const power = (base, exp) => {
     console.log(base, exp)
     if (exp === 0) return 1;
@@ -16,6 +20,10 @@ console.log('------- Question 1: End ---------')
 
 console.log(`------- Question 2: Write a function called productOfArray which takes in an array of numbers and returns the product of them all? --------`);
 console.log('----------------')
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const productOfArray = (inputArr) => {
     let result = 1;
     for (let i = 0; i < inputArr.length; i++) {
@@ -31,6 +39,10 @@ console.log('------- Question 2: End ---------')
 
 console.log(`------- Question 3: Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers? --------`);
 console.log('----------------')
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const fib = (n) => {
     if (n <= 2) return 1;
     return fib(n - 1) + fib(n - 2);
@@ -45,6 +57,10 @@ console.log(fib(35)) // 9227465
 console.log('------- Question 3: End ---------')
 
 console.log('-------- Question 4: Write a recursive function called reverse which accepts a string and returns a new string in reverse? --------');
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const reverse = (str) => {
     if (str.length <= 1) return str;
     return reverse(str.substring(1)) + str[0];
@@ -56,6 +72,10 @@ console.log(reverse('rececar')) // 'racecar'
 console.log('------- Question 4: End ---------')
 
 console.log('------- Question 5: Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false? ---------');
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const isPalindrome = (str, firstTime = true) => {
     let tempStr = (firstTime) ? str : '';
     if (str.length <= 1) return str;
@@ -64,6 +84,10 @@ const isPalindrome = (str, firstTime = true) => {
     return (str.length === tempStr.length) ? str === tempStr : str;
 }
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const isPalindromeRefactored = (str) => {
     if (str.length <= 1) return true;  // Base case
     if (str[0] !== str[str.length - 1]) return false;  // Char comparison
@@ -80,6 +104,10 @@ console.log('------- Question 5: End ---------')
 console.log('------- Question 6: Write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false? -------');
 // SAMPLE INPUT / OUTPUT
 const isOdd = val => val % 2 !== 0;
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(1) //due to slice making it efficient
+ */
 const someRecursive = (inputArr, fnCallaback) => {
     console.log(JSON.stringify(inputArr));
     if (inputArr.length === 0) return false;

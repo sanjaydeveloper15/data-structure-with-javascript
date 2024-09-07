@@ -1,5 +1,9 @@
 console.log('~~~~~~~ Sum ~~~~~~~~');
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const sumRange = (uptoNum) => {
     console.log('uptoNum',uptoNum);
     if(uptoNum === 1) return 1;
@@ -18,6 +22,10 @@ console.log('~~~~~~~~~~~~~~~~~~~~~')
 console.log('~~~~~~~ Factorial ~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~')
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const factorial = (uptoNum) => {
     console.log('uptoNum',uptoNum);
     if(uptoNum === 1) return 1;

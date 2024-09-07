@@ -1,6 +1,10 @@
 console.log('---- Multidimensional Arrays --------');
 let multiArr = [1, 2, [3, 4, [5, 6], 7], 8, 9, [10], 11];
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n) 
+ */
 const arrSum = (inputMultiArr) => {
     let totalSum = 0;
     inputMultiArr = inputMultiArr.flat(10);
@@ -14,6 +18,10 @@ console.log('arrSum() Result:', arrSum(multiArr));
 
 console.log(`--------------------------`);
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(d) // here d denote for depth
+ */
 const arrSumRecursion = (inputMultiArr) => {
     let totalSum = 0;
     for (let i = 0; i < inputMultiArr.length; i++) {
@@ -30,6 +38,10 @@ console.log('arrSumRecursion() Result:', arrSumRecursion(multiArr));
 
 console.log(`--------------------------`)
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n+d) // here d denote for depth
+ */
 const arrMultiplyRecursion = (inputMultiArr) => {
     let totalMultiplyVal = 1;
     for (let i = 0; i < inputMultiArr.length; i++) {
@@ -47,6 +59,10 @@ console.log('arrMultiplyRecursion() Result:', arrMultiplyRecursion(multiArr).toL
 
 console.log('------- Question: Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.? -------');
 
+/**
+ * Time Complexity : O(n)
+ * Space Complexity: O(n+d) // here d denote for depth
+ */
 const flatten = (inputArr, resultArr = []) => {
     for (let i = 0; i < inputArr.length; i++) {
         if (Array.isArray(inputArr[i])) {
@@ -60,5 +76,5 @@ const flatten = (inputArr, resultArr = []) => {
 
 console.log(flatten([1, 2, 3, [4, 5]])) // [1, 2, 3, 4, 5]
 console.log(flatten([1, [2, [3, 4], [[5]]]])) // [1, 2, 3, 4, 5]
-console.log(flatten([[1],[2],[3]])) // [1,2,3]
+console.log(flatten([[1], [2], [3]])) // [1,2,3]
 console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])) // [1,2,3]
