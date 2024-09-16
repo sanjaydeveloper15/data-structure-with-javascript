@@ -55,4 +55,18 @@ Runs two loops for sorting the Integer arrays and swap the numbers basis upon co
 
 ### Merge Sort
 
-Merge sort works really well with big size of Integer arrays as well and give response so faster as compare to Bubble/Insertion/Selection sort algorithms. It improves time complexity from O(nSquare) to O(n-log-n).
+It's an combination of two things - merging and sorting. Merge sort works really well with big size of Integer arrays as well and give response so faster as compare to Bubble/Insertion/Selection sort algorithms. It improves time complexity from O(nSquare) to O(n-log-n) stable in each scenario.
+
+### Quick Sort
+
+Quick sort works by selecting a pivot element and partitioning the array into elements less than the pivot and elements greater than the pivot. This process is then recursively applied to the sub-arrays.
+
+- Pivot: Select an element as the pivot.
+- Partition: Reorder the array so that elements less than the pivot are on the left, and elements greater than the pivot are on the right.
+- Apply quick sort recursively to the left and right sub-arrays.
+
+#### Time & Space Complexity
+
+- Best & Averate Case - O(n log n)
+- Wrost Case - O(nSquare)
+- Space - O(log n) for the recursion stack in the average case and in wrost case O(n).
