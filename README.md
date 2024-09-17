@@ -70,3 +70,11 @@ Quick sort works by selecting a pivot element and partitioning the array into el
 - Best & Averate Case - O(n log n)
 - Wrost Case - O(nSquare)
 - Space - O(log n) for the recursion stack in the average case and in wrost case O(n).
+
+### Radix Sort
+
+Radix sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. It’s particularly efficient for sorting integers or strings where you want to sort based on digit or character positions rather than direct comparisons.
+
+- Determine the Maximum Number of Digits
+- Sort Digits by Place Value
+- Repeat for Each Digit Place
