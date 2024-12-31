@@ -1,4 +1,4 @@
-# JavaScript Data-Structure Questions/Programs
+# **🧮 JavaScript Data Structures and Algorithms**
 
 <p align="center">
   <img src="https://i.postimg.cc/rmd6DfZD/dsa.jpg" alt="DSA - Education Funda"/>
@@ -21,10 +21,12 @@ In this repository we cover some of the most commonly asked JavaScript data stru
 8. Write a program to find duplicate numbers in an integer array ?
 9. How do you remove duplicates from an integer array ?
 10. We have group of people in the form of array and you have to group people basis upon age ?
-11. Count unique value from Sorted Array without using any array methods and set() with **O(n)** Time Complexity ?
-    and lot more...
+11. Count unique values in a sorted array without `Array` methods or `Set()` in **O(n)**.
 
-[Read Blog](https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/)
+Refer to the [blog post](https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/).
+
+
+## **🧠 Problem-Solving Patterns**
 
 ### Fequency Counter
 
@@ -79,14 +81,39 @@ Radix sort is a non-comparative sorting algorithm that sorts numbers by processi
 - Sort Digits by Place Value
 - Repeat for Each Digit Place
 
+## **📈 Time & Space Complexity Overview**
+
+| Algorithm      | Best Case   | Average Case | Worst Case  | Space Complexity |
+|----------------|-------------|--------------|-------------|------------------|
+| **Bubble Sort**| O(n)        | O(n²)        | O(n²)       | O(1)             |
+| **Merge Sort** | O(n log n)  | O(n log n)   | O(n log n)  | O(n)             |
+| **Quick Sort** | O(n log n)  | O(n log n)   | O(n²)       | O(log n)         |
+| **Radix Sort** | O(nk)       | O(nk)        | O(nk)       | O(n+k)           |
+
+---
+
+## **📄 Usage Instructions**
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/sanjaydeveloper15/js-data-structure-questions.git
+   cd js-data-structure-questions
+   ```
+
+2. **Run Code Examples**
+   Open any file in your preferred IDE or run examples directly using Node.js.
+
+3. **Explore Patterns and Solutions**
+   Dive into problem-solving patterns and example implementations to sharpen your skills.
+
 ## ❤️ Found this project useful?
 
 If you found this project useful, then please consider giving it a ⭐️ on Github and sharing it with your friends via social media.
 
 Feel free to reach out to me through @sanjaykumarwebs if you have any questions or feedback!
 
-### Recommended / Preferred
+## **📚 Recommended Resources**
 
-- [Visual Studio Code](https://code.visualstudio.com/download)
-- [Education Funda](https://www.youtube.com/@EducationFundaIndia)
-- [Sanjay Kumar](https://sanjaydeveloper.netlify.app/)
+- **[Visual Studio Code](https://code.visualstudio.com/download)**: IDE for JavaScript development.
+- **[Education Funda](https://www.youtube.com/@EducationFundaIndia)**: Tutorials on data structures and algorithms.
+- **[Sanjay Kumar](https://sanjaydeveloper.netlify.app/)**: Explore my portfolio for more projects.
