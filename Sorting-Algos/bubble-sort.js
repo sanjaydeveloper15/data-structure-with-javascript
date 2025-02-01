@@ -1,4 +1,6 @@
 // Custom sorting program in JS via Bubble Sort?
+// Time Complexity O(nSquare)
+// Space Complexity O(1)
 let unSortArr = [4, -1, 34, 9, -9, 103];
 
 const sortArr = (inputArr) => {
@@ -46,3 +48,42 @@ const sortArrOpt = (inputArr) => {
 };
 
 console.log(sortArrOpt(unSortArr));
+
+
+// Time Complexity: O(nSquare)
+function sortArrPlayGround(inputArr, type) {
+    // Step 1: validations checks
+    type = type.toLowerCase();
+    const validSortTypes = ['asc', 'desc'];
+    if (!Array.isArray(inputArr)) {
+        return 'Input parameter should be array only.';
+    }
+    if (!validSortTypes.includes(type)) {
+        return 'Sort type should be asc or desc only.';
+    }
+
+    // Step 2: start sorting algo
+    if(type === 'asc') {
+        for (let i = 0; i < inputArr.length; i++) {
+            for(let j = i + 1; j < inputArr.length; j++) {
+                if(inputArr[i] > inputArr[j]) {
+                    const tempEleVal = inputArr[i]
+                    inputArr[i] = inputArr[j];
+                    inputArr[j] = tempEleVal;
+                }
+            }
+        }
+    }
+    if(type === 'desc') {
+        for (let i = 0; i < inputArr.length; i++) {
+            for(let j = i + 1; j < inputArr.length; j++) {
+                if(inputArr[i] < inputArr[j]) {
+                    const tempEleVal = inputArr[i]
+                    inputArr[i] = inputArr[j];
+                    inputArr[j] = tempEleVal;
+                }
+            }
+        }
+    }
+    return inputArr;
+}

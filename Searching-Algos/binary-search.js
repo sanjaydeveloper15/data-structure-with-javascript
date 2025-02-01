@@ -48,3 +48,26 @@ const binarySearch = (sortedNumArr, findVal) => {
 
 console.log(binarySearch([1, 2, 3, 4, 5], 6)) // -1
 console.log(binarySearch([1, 3, 5, 6, 9, 14, 29, 57, 89], 29)); // 1
+
+let arr = [1, 2, 3, 4, 10, 20, 31, 43, 51]
+
+function inArray(val) {
+    let result = false;
+    let leftIndex = 0, rightIndex = arr.length - 1, midIndex;
+    let count = 0;
+    while(leftIndex < rightIndex) {
+        midIndex = Math.round((leftIndex + rightIndex)/2)
+        if(arr[leftIndex] === val || arr[midIndex] === val || arr[rightIndex] === val) return true
+        if(midIndex === rightIndex) return false
+        if(val > arr[midIndex]) {
+            leftIndex = midIndex
+        } else {
+            rightIndex = midIndex
+        }
+        count ++
+        console.log(count)
+    }
+    return result;
+}
+
+console.log(inArray(43));
