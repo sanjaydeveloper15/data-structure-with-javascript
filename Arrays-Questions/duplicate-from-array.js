@@ -33,3 +33,23 @@ function getDuplicateFromArrOpt(inputArr) {
 }
 
 console.log(getDuplicateFromArrOpt(arr))
+
+const str = "You're absolutely right! Your original solution indeed had better time complexity (O(n)) compared to the sorted solution I shared, which was O(n log n) due to the sorting step."
+
+
+function duplicateChars(str) {
+    let uniqueCharSet = new Set();
+    let duplicateCharSet = new Set();
+
+    for(const char of str) {
+        if(uniqueCharSet.has(char)) {
+            duplicateCharSet.add(char)
+        } else {
+            uniqueCharSet.add(char)
+        }
+    }
+
+    return duplicateCharSet
+}
+
+console.log(duplicateChars(str))
