@@ -44,3 +44,25 @@ var twoSumOpt = function (nums, target) {
 };
 
 console.log(twoSumOpt([2, 7, 11, 15], 9))
+
+let arr = [5, 7, 1, 2, 8, 4, 3]
+
+function hasPairWithSum(arr, target) {
+    const seen = new Set();
+
+    for (const num of arr) {
+        const complement = target - num;
+        //   console.log(complement)
+        //   console.log(seen)
+        if (seen.has(complement)) {
+            return true;
+        }
+
+        seen.add(num);
+    }
+
+    return false;
+}
+
+console.log(hasPairWithSum(arr, 10)); // true 
+console.log(hasPairWithSum([2, 8, 11, 14], 20));    // false
