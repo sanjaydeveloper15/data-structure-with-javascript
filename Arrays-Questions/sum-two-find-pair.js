@@ -1,4 +1,5 @@
 /**
+ * Q. Determine if the sum of two integers is equal to the given value
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -48,11 +49,11 @@ console.log(twoSumOpt([2, 7, 11, 15], 9))
 let arr = [5, 7, 1, 2, 8, 4, 3]
 
 function hasPairWithSum(arr, target) {
-    const seen = new Set();
+    const seen = new Set(); //2, 7
 
     for (const num of arr) {
         const complement = target - num;
-        //   console.log(complement)
+          console.log(complement)
         //   console.log(seen)
         if (seen.has(complement)) {
             return true;
