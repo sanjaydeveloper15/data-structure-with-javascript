@@ -48,7 +48,7 @@ console.log(twoSumOpt([2, 7, 11, 15], 9))
 
 let arr = [5, 7, 1, 2, 8, 4, 3]
 
-function hasPairWithSum(arr, target) {
+function hasPairWithSum(arr, target) { // Not accurate for pairs, but okay for true/false
     const seen = new Set(); //2, 7
 
     for (const num of arr) {
@@ -67,3 +67,26 @@ function hasPairWithSum(arr, target) {
 
 console.log(hasPairWithSum(arr, 10)); // true 
 console.log(hasPairWithSum([2, 8, 11, 14], 20));    // false
+
+// Time Complexity O(n)
+function findPairOn(inputArr, target) {
+    const numSet = new Set(inputArr)
+    const resultSet = new Set()
+    for (let i = 0; i < inputArr[i]; i++) {
+        const v = (target > inputArr[i]) ? target - inputArr[i] : inputArr[i] - target;
+        if (numSet.has(v)) {
+            // 10 - 8 = 2 if 2 available so 8 and 2
+            // 10 - 2 = 8 if 8 availalbe so 2 and 8
+            if (v + inputArr[i] === target) {
+                // sorting then swapping, removing the possibility of duplicate pairs 'a,b' and 'b,a'
+                let [a, b] = (v < inputArr[i]) ? [v, inputArr[i]] : [inputArr[i], v];  
+                resultSet.add(`${a},${b}`)
+            }
+        }
+    }
+    return resultSet;
+}
+
+
+console.log(findPairOn([2, 7, 11, 15], 9))
+console.log(findPairOn([5, 7, 1, 2, 8, 4, 3], 10))

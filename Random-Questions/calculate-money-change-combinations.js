@@ -8,6 +8,7 @@
  * 1, 1, 5
  * 2, 5
  * Total Methods 6 Possible
+ * DP (Dynamic Programming)
  */
 
 function changePossibility(coinsArr, totalAmount) {

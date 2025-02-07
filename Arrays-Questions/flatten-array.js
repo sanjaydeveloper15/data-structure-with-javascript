@@ -1,33 +1,28 @@
-//Write a program to flat Matrix array [1,[2,3],[4,5,6,[7,8]]] = [1,2,3,4,5,6,7,8]
+/**
+ * Flatten the below given array without using array.flat() method.
+ * @param {Array} inputArr 
+ * @param {Array} flattenArray 
+ * @returns {Array}
+ */
 
-const flatArray = (matrixArray, innerArray = [], startFrom = 0, resultArr = []) => {
-    let count = 0;
-    let loopArray = (innerArray.length === 0) ? matrixArray : innerArray;
-    let tempStartFrom = startFrom;
-    startFrom = (innerArray.length === 0) ? tempStartFrom : 0;
-    for (let i = startFrom; i < loopArray.length; i++) {
-        if (Array.isArray(loopArray[i])) {
-            return flatArray(matrixArray, matrixArray[i], i, resultArr);
+
+function customFlattenArray(inputArr, flattenArray = []) {
+    if (!Array.isArray(inputArr)) return 'Input array is required.';
+    if (inputArr.length === 0) return flattenArray;
+    if (Array.isArray(inputArr[0])) {
+        for (let i = 0; i < inputArr[0].length; i++) {
+            if (Array.isArray(inputArr[0][i])) {
+                return customFlattenArray(inputArr[0][i], flattenArray)
+            } else {
+                flattenArray.push(inputArr[0][i])
+            }
         }
-        else {
-            resultArr.push(loopArray[i]);
-        }
+    } else {
+        flattenArray.push(inputArr[0])
     }
-
-
-    count++;
-
-    if (count == 3) return false;
-
-    if (tempStartFrom != 0 && tempStartFrom < matrixArray.length - 1) {
-        console.log(matrixArray, [], tempStartFrom, resultArr)
-        return flatArray(matrixArray, [], tempStartFrom, resultArr);
-    }
-
-
-    return resultArr;
+    inputArr.splice(0, 1)
+    return customFlattenArray([...inputArr], flattenArray);
 }
 
 let inputArr = [1, [2, 3], [4, 5, 6, [7, 8]]];
-
-console.log(flatArray(inputArr));
+console.log(customFlattenArray(inputArr))

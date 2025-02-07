@@ -14,3 +14,15 @@ const getFibbonaciSeries = ((tillNum) => {
 });
 
 console.log(getFibbonaciSeries(10))
+
+
+
+function generateFibonacciSeries(uptoNum, resultSeriesArr = [0, 1]) {
+    if (typeof uptoNum != 'number') return 'Input upto number is required';
+    if (uptoNum < 2) return 'At least upto 2 number of series input is required';
+    if (resultSeriesArr.length === uptoNum) return [...resultSeriesArr];
+    resultSeriesArr.push(resultSeriesArr[resultSeriesArr.length - 1] + resultSeriesArr[resultSeriesArr.length - 2])
+    return generateFibonacciSeries(uptoNum, [...resultSeriesArr])
+}
+
+console.log(generateFibonacciSeries(10))
