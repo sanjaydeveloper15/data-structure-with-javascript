@@ -35,3 +35,37 @@ function isAvailableInDict(strArr, segmentedStr) {
 // console.log(isAvailableInDict(['apple', 'pear', 'pie', 'baby', 'sweet','s', 'ca', 't'], 'cats'))
 // console.log(isAvailableInDict(['apple', 'pear', 'pie', 'baby', 'sweet','a', 'ca', 't'], 'cats'))
 console.log(isAvailableInDict(['c','a','t','s'], 'cats'))
+
+
+const strDict = ['apple', 'pear', 'pie']
+
+function strSegmentations(strArr, word) {
+    const dictSet = new Set(strArr)
+    let result = true
+
+    function backtracking(currentIndex) {
+        console.log('backtrack invoke', currentIndex)
+        if (word.length === currentIndex) {
+            console.log('complete')
+            return true
+        }
+        // console.log(currentIndex, word.slice(currentIndex, currentIndex))
+        for (let i = currentIndex + 1; i <= word.length; i++) {
+            const subWord = word.slice(currentIndex, i);
+            if (dictSet.has(subWord)) {
+                console.log('found:', subWord)
+                if(backtracking(i)) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+    result = backtracking(0, true);
+
+    return result;
+}
+
+console.log(strSegmentations(strDict, 'applepear'));
+console.log(strSegmentations(['c','a','t','s'], 'cats'))
